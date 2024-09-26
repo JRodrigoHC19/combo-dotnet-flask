@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Gatos</title>
+</head>
+<body>
+    <h1>Lista de Gatos</h1>
+    <ul>
+        {% for cat in cats %}
+            <li>
+                <p><strong>ID:</strong> {{ cat._id }}</p>
+                <p><strong>Mimetype:</strong> {{ cat.mimetype }}</p>
+                <p><strong>Tamaño:</strong> {{ cat.size }} bytes</p>
+                <p><strong>Etiquetas:</strong> {{ cat.tags | join(', ') }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
